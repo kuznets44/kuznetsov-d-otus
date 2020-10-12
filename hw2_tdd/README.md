@@ -11,3 +11,5 @@ $0 // HTMLElement
 getPath($0) // =&gt; "body div.someclass ul li:first-child"
 ```
 
+Запуск тестов: npm run test
+Запуск для проверки работы функции в браузере: npm run start
