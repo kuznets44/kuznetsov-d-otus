@@ -1,0 +1,15 @@
+{
+  "name": "hw2_tdd",
+  "version": "1.0.0",
+  "description": "Задача:",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.5.3"
+  }
+}
