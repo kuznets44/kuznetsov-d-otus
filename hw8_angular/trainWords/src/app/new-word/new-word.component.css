@@ -1,0 +1,10 @@
+.mat-dialog-content {
+  height: 150px;
+  width:400px;
+}
+.example-full-width {
+  width: 100%;
+}
+.error {
+  color: red;
+}

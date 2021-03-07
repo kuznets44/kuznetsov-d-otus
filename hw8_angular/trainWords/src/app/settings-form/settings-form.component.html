@@ -1,0 +1,13 @@
+<form class="example-form">
+  <mat-form-field appearance="fill">
+    <mat-label>Язык</mat-label>
+    <mat-select  matNativeControl [formControl]="localeSelected">
+      <mat-option *ngFor="let lang of languages" [value]="lang.locale" (click)="updateSettings()">{{ lang.name }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Количество слов в тренинге</mat-label>
+    <input type="number" min="1" matInput [formControl]="wordsAmount" (input)="updateSettings()">
+  </mat-form-field>
+</form> 

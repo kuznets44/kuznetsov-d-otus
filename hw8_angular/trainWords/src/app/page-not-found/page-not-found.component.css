@@ -1,0 +1,11 @@
+.page-not-found {
+  width: 100%;
+  text-align: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.page-not-found h1 {
+  margin: 0 auto;
+}

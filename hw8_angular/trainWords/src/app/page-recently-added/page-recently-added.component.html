@@ -1,0 +1,12 @@
+<div class="page">
+  <h1 class="mat-display-1">{{ title }}</h1>
+
+  <app-words-list></app-words-list>
+
+  <button mat-fab color="accent"
+          aria-label="Добавить слово"
+          [style]="{width:'100px',height:'100px',position:'absolute',bottom:'20px',right:'20px'}"
+          (click)="openDialog()">
+    <mat-icon>library_add</mat-icon>
+  </button>
+</div>

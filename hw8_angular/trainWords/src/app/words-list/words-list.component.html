@@ -1,0 +1,12 @@
+<mat-list class="words-list">
+  <div *ngFor="let wordsByDate of wordsByDates">
+    <div mat-subheader>{{ wordsByDate.date }}</div>
+    <mat-list-item *ngFor="let word of wordsByDate.words">
+      <mat-icon mat-list-icon>article</mat-icon>
+      <div mat-line>{{word.word}}</div>
+      <div mat-line> {{word.translation}} </div>
+
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </div>
+</mat-list>
