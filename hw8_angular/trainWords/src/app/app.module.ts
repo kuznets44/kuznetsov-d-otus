@@ -62,7 +62,7 @@ const appRoutes: Routes = [
     EducationResultComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     MatSidenavModule,
     MatToolbarModule,
@@ -80,7 +80,9 @@ const appRoutes: Routes = [
     HttpClientModule,
     MatStepperModule,
     MatTableModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes, {
+    initialNavigation: 'enabled'
+})
   ],
   providers: [],
   bootstrap: [AppComponent],

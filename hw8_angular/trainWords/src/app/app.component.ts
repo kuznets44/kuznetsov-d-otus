@@ -30,6 +30,10 @@ export class AppComponent {
           text: itemData.title
         });  
       }
+      let activeLink = location.pathname.replace('/','');
+      if(activeLink !== '') {
+        this.activeLink = activeLink;
+      }
     });
     
   }

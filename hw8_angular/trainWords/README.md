@@ -1,27 +1,30 @@
-# TrainWords
+ДЗ№9. Routing для приложения запоминания иностранных слов
+------------------------------------------------------------
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
 
-## Development server
+Реализовать `UI` приложения
+- Создать компоненты для добавления текста/слов в словарь
+- Разработать компоненты и формы для тренировки запоминания слов
+- Добавить экран настройку приложения, сохранять состояние
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Добавить routing, ссылки на страницы и переходы между компонентами приложения.
+Добавить и актуализировать тесты для компонент приложения, настроить universal рендеринг приложения.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Решение
+-------------
 
-## Build
+В процессе разработки активно использовалась библиотека компонентов Angular Material, которая позволила
+выполнить интерфейс в современном ключе и изучить большой спект компонентов UI, применяемых при разработке. 
+Кроме того, применение этой библиотеки позволило изучить ряд неочевидных
+моментов, возникающих при разработке и особенно при тестировании (в частности, настройки TestBed с необходимыми импортами и провайдерами)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Согласно заданию, приложение было выполнено в виде следующих элементов:
+1. Страница "Недавно добавленные слова" https://i.imgur.com/pHesHjZ.png
+2. Форма добавления нового слова https://i.imgur.com/bZgWYNn.png
+3. Страница тестирования https://i.imgur.com/TTEUIZS.png
+4. Форма результатов теста https://i.imgur.com/jInVboN.png
+5. Страница настроек https://imgur.com/mSNdePc.png
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+В рамках задания были доработаны тесты для сервисов и компонентов (всего порядка 40 тестов), а также выполнены интеграционные тесты (3 теста)
+Также, согласно заданию, для приложения был установлен и проверен SSR
