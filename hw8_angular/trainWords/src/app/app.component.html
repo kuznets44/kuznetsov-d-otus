@@ -1,0 +1,20 @@
+<mat-sidenav-container class="sidenav-container">
+
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <img style="height: 64px;" src="./../assets/img/angular-white-transparent.svg" />
+      <span>{{ title }}: {{ langSelected.name }}</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+
+    <nav mat-tab-nav-bar>
+      <a mat-tab-link *ngFor="let link of links"
+        [routerLink] = "link.route"
+        (click)="activeLink = link.route"
+        [active]="activeLink == link.route"> {{link.text}} </a>
+    </nav>
+    
+    <router-outlet></router-outlet>
+    
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,29 @@
+<div class="page">
+  <h1 class="mat-display-1">{{ title }}</h1>
+  
+  <h2 class="mat-display-5">Переведите {{ wordsAmount }} слов</h2>
+
+  <div class="display-1	error" *ngIf="wordsToTranslate.length < wordsAmount">
+    Добавьте слова ({{ wordsAmount - wordsToTranslate.length }}) для начала теста!
+  </div>
+
+  <mat-horizontal-stepper *ngIf="wordsToTranslate.length >= wordsAmount" [linear]="true" #stepper>
+    <mat-step *ngFor="let word of wordsToTranslate;let i = index"
+              [stepControl]="word.formGroup">
+      <form [formGroup]="word.formGroup">
+        <ng-template matStepLabel></ng-template>
+        <h1 class="mat-display-1" style="margin-top: 30px;">{{ word.word }}</h1>
+        <mat-form-field>
+          <mat-label>Перевод</mat-label>
+          <input matInput placeholder="Введите перевод слова" formControlName="ctrlTranslation" required>
+        </mat-form-field>
+        <div>
+          <button *ngIf="i > 0" mat-button matStepperPrevious>Пред</button>
+          <button *ngIf="i < wordsToTranslate.length - 1" mat-button matStepperNext>След</button>
+          <button *ngIf="i == wordsToTranslate.length - 1" mat-button (click)="calculateResult()">Результат</button>
+        </div>
+      </form>
+    </mat-step>
+  </mat-horizontal-stepper>  
+
+</div>
