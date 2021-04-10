@@ -1,0 +1,21 @@
+.navbar-nav {
+  &.navbar-nav__filter {
+    flex-direction: row;
+    
+    & .nav-link {
+      margin-right: 10px;
+    }
+  }
+}
+
+.list-group-item.completed {
+  text-decoration: line-through;
+}
+.toobar-header {
+  line-height: 1.6!important;
+  margin-bottom: 0!important;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+}
